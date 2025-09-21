@@ -74,3 +74,44 @@ document.addEventListener('DOMContentLoaded', function() {
     updateSlidePosition();
   });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxClose = document.querySelector('.lightbox-close');
+
+  function openLightbox(imageSrc, imageAlt) {
+    lightboxImage.src = '';
+    lightboxImage.alt = imageAlt;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    lightboxImage.src = imageSrc;
+
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeLightbox();
+    }
+  });
+
+  const projectImages = document.querySelectorAll('#projets-info img, #projets-art img');
+  projectImages.forEach(img => {
+    img.classList.add('clickable-image');
+    img.addEventListener('click', function() {
+      openLightbox(this.src, this.alt);
+    });
+  });
+});
