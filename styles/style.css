@@ -88,7 +88,7 @@ body {
 }
 
 .carousel-container {
-  touch-action: pan-y;
+  touch-action: pan-y pan-x;
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;

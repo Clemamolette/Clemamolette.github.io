@@ -87,7 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
     carousel.addEventListener('touchmove', (e) => {
       if (!isDragging) return;
-      e.preventDefault();
+      
+      const currentX = e.touches[0].clientX;
+      const currentY = e.touches[0].clientY;
+      const diffX = Math.abs(startX - currentX);
+      const diffY = Math.abs(startY - currentY);
+      
+      // Si le mouvement est plus horizontal que vertical, on bloque le scroll vertical
+      if (diffX > diffY && diffX > 10) {
+        e.preventDefault();
+      }
     }, { passive: false });
 
     carousel.addEventListener('touchend', (e) => {
