@@ -46,22 +46,32 @@ body {
   color: #c084fc; /* violet néon */
 }
 
-/* mise en quinconce des projets infos */
-#projets-info > div:nth-child(odd) {
-  direction: rtl;
-}
-#projets-info > div:nth-child(odd) > div {
-  direction: ltr;
+/* mise en quinconce des projets infos - seulement sur desktop */
+@media (min-width: 1024px) {
+  #projets-info > div:nth-child(odd) {
+    direction: rtl;
+  }
+  #projets-info > div:nth-child(odd) > div {
+    direction: ltr;
+  }
+
+  #projets-info > div:nth-child(odd) {
+    margin-left: auto;
+    margin-right: 4%;
+  }
+
+  #projets-info > div:nth-child(even) {
+    margin-right: auto;
+    margin-left: 4%;
+  }
 }
 
-#projets-info > div:nth-child(odd) {
-  margin-left: auto;
-  margin-right: 4%;
-}
-
-#projets-info > div:nth-child(even) {
-  margin-right: auto;
-  margin-left: 4%;
+/* Améliorations pour mobile */
+@media (max-width: 1023px) {
+  #projets-info > div {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 }
 
 .carousel-indicators {

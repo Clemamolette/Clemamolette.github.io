@@ -16,29 +16,33 @@
     <img src="images/sleepy_kitty.gif" 
         alt="Sleepy Kitty" 
         id="sleepy-kitty"
-        class="fixed top-4 right-72 w-16">
+        class="fixed top-4 right-4 sm:right-72 w-12 sm:w-16 z-10">
 
-<header class="container mx-auto px-8 py-16 flex justify-end items-center space-x-8">
-
-    <div class="text-right w-122">
-        <h1 class="text-5xl font-bold mb-4 text-purple-400">Clémentine Galloy</h1>
-        <p class="text-xl mb-6">Je développe des projets tech et je dessine - deux arts que j'essaye d'allier au mieux. <br/>
-            Ici, vous trouverez mes projets d'informatique, mes dessins et quelques expériences entre les deux. <br/>
-            <br/>
-            Pas de discours, juste un espace pour partager ce que je fais, avec l'idée que ça puisse parler à quelqu'un. <br/>
-            Bienvenue !</p>
-        <div class="flex justify-end space-x-4">
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/Clemamolette"
-                class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg">GitHub</a>
-            <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/clementine-galloy-6578b1252"
-                class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg">LinkedIn</a>
-            <a target="_blank" rel="noopener noreferrer" href="images/CV_Clémentine_Galloy_Septembre_2025.pdf" download
-                class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg">Télécharger CV</a>
+<header class="container mx-auto px-4 sm:px-8 py-8 sm:py-16">
+    <!-- Mobile layout: stacked vertically -->
+    <div class="flex flex-col lg:flex-row lg:justify-end lg:items-center lg:space-x-8 space-y-6 lg:space-y-0">
+        <!-- Photo - centered on mobile, right on desktop -->
+        <div class="flex justify-center lg:justify-end lg:order-2">
+            <img src="images/pdp.jpg" class="w-48 h-48 sm:w-56 sm:h-56 rounded-full border-4 border-purple-500">
         </div>
-    </div>
-
-    <div class="flex-shrink-0">
-        <img src="images/pdp.jpg" class="w-56 h-56 rounded-full border-4 border-purple-500">
+        
+        <!-- Text content - centered on mobile, right-aligned on desktop -->
+        <div class="text-center lg:text-right lg:order-1 lg:w-122">
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-purple-400">Clémentine Galloy</h1>
+            <p class="text-base sm:text-lg lg:text-xl mb-6 px-4 lg:px-0">Je développe des projets tech et je dessine - deux arts que j'essaye d'allier au mieux. <br class="hidden sm:block"/>
+                Ici, vous trouverez mes projets d'informatique, mes dessins et quelques expériences entre les deux. <br class="hidden sm:block"/>
+                <br class="hidden sm:block"/>
+                Pas de discours, juste un espace pour partager ce que je fais, avec l'idée que ça puisse parler à quelqu'un. <br class="hidden sm:block"/>
+                Bienvenue !</p>
+            <div class="flex flex-col sm:flex-row justify-center lg:justify-end space-y-3 sm:space-y-0 sm:space-x-4">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Clemamolette"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg text-center">GitHub</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/clementine-galloy-6578b1252"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg text-center">LinkedIn</a>
+                <a target="_blank" rel="noopener noreferrer" href="images/CV_Clémentine_Galloy_Septembre_2025.pdf" download
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg text-center">Télécharger CV</a>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -56,37 +60,37 @@
     <div class="tab-content" id="projets-info">
         <br/>
 
-        <div class="bg-gray-900 rounded-2xl m-6 p-6 shadow-lg shadow-purple-500/30 grid md:grid-cols-3 gap-6 w-3/5" style="align-items: center;">
-            <div>
+        <div class="bg-gray-900 rounded-2xl m-3 sm:m-6 p-4 sm:p-6 shadow-lg shadow-purple-500/30 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full lg:w-3/5 mx-auto" style="align-items: center;">
+            <div class="lg:order-1">
                 <!-- CAROUSEL -->
                 <div class="carousel-container relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl">
                     <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/cana_viewer.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/cana_viewer.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/cana_temple.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/cana_temple.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                     </div>
 
-                    <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❮
                     </button>
-                    <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❯
                     </button>
 
-                    <div class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                    <div class="carousel-indicators absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
                     </div>
                 </div>
             </div>            
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 lg:order-2 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-semibold text-purple-400">Génération de bâtiment Minecraft</h3>
-                    <h2 class="text-2xl italic text-gray-500">2025</h2>
-                    <p class="mt-2 text-gray-300">Projet de fin d'étude en groupe visant à implémenter une IA générative pour créer des bâtiments en 3D dans Minecraft. 
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-400">Génération de bâtiment Minecraft</h3>
+                    <h2 class="text-xl sm:text-2xl italic text-gray-500">2025</h2>
+                    <p class="mt-2 text-sm sm:text-base text-gray-300">Projet de fin d'étude en groupe visant à implémenter une IA générative pour créer des bâtiments en 3D dans Minecraft. 
                         Nous avons utilisé un VQ-Gan insipré de la génération de vidéos et adapté à notre format de structure. Le projet a inclus la récolte et le pré-traitement des données, l'entraînement du modèle,
                     l'optimisation des fonctions de perte et le post-traitement de la sortie du modèle pour l'adapter à une importation dans le jeu.
                     <br/><br/>
@@ -95,8 +99,8 @@
                     <br/><br/>
                     Le processus d'installation ainsi que des exemples de génération se trouvent sur la page GitHub du projet, n'hésitez pas à aller jeter un oeil!
                     </p>
-                    <div class="flex flex-wrap mt-4 space-x-4 text-3xl">
-                        <i class="devicon-python-plain text-4xl text-white-400"></i>
+                    <div class="flex flex-wrap mt-4 space-x-2 sm:space-x-4 text-2xl sm:text-3xl">
+                        <i class="devicon-python-plain text-3xl sm:text-4xl text-white-400"></i>
                         <i class="devicon-streamlit-plain-wordmark"></i>
                         <i class="devicon-kaggle-original-wordmark"></i>
                         <i class="devicon-git-plain-wordmark"></i>
@@ -108,123 +112,123 @@
             </div>
         </div>
 
-        <div class="bg-gray-900 rounded-2xl m-6 p-6 shadow-lg shadow-purple-500/30 grid md:grid-cols-3 gap-6 w-3/5" style="align-items: center;">
-            <div>
-                <img src="images/info/logo livria.png" class="w-full h-64 object-cover rounded-xl" />
+        <div class="bg-gray-900 rounded-2xl m-3 sm:m-6 p-4 sm:p-6 shadow-lg shadow-purple-500/30 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full lg:w-3/5 mx-auto" style="align-items: center;">
+            <div class="lg:order-2">
+                <img src="images/info/logo livria.png" class="w-full h-48 sm:h-64 object-cover rounded-xl" />
             </div>            
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 lg:order-1 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-semibold text-purple-400">Détection des livres dans une bibliothèque</h3>
-                    <h2 class="text-2xl italic text-gray-500">2025</h2>
-                    <p class="mt-2 text-gray-300">Projet de deep learning en groupe. L'objectif de ce projet est d'obtenir une liste des livres, incluant titre et auteur, des livres présent dans une image de bibliothèque. Cette détection 
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-400">Détection des livres dans une bibliothèque</h3>
+                    <h2 class="text-xl sm:text-2xl italic text-gray-500">2025</h2>
+                    <p class="mt-2 text-sm sm:text-base text-gray-300">Projet de deep learning en groupe. L'objectif de ce projet est d'obtenir une liste des livres, incluant titre et auteur, des livres présent dans une image de bibliothèque. Cette détection 
                         passe par la reconnaissance des côtes des livres en tant qu'objets orientés, puis par une lecture des caractères présents sur chaque objet détecté avec de l'OCR.
                     <br/><br/>
                     Nous avons utilisé le modèle OBB de YOLO, fine-tuné sur notre dataset et plusieurs modèles d'OCR pour avoir les meilleurs résultats en fonction du temps de calcul.
                     </p>
-                    <div class="flex flex-wrap mt-4 space-x-4 text-3xl">
-                        <i class="devicon-python-plain text-4xl text-white-400"></i>
+                    <div class="flex flex-wrap mt-4 space-x-2 sm:space-x-4 text-2xl sm:text-3xl">
+                        <i class="devicon-python-plain text-3xl sm:text-4xl text-white-400"></i>
                         <i class="devicon-streamlit-plain-wordmark"></i>
                     </div>
                 </div>
                 <div class="mt-4">
-                <a target="_blank" rel="noopener noreferrer"  href="https://github.com/Clemamolette/livrIA" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg">Voir le code (GitHub)</a>
+                <a target="_blank" rel="noopener noreferrer"  href="https://github.com/Clemamolette/livrIA" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center">Voir le code (GitHub)</a>
                 </div>
             </div>
         </div>
 
-        <div class="bg-gray-900 rounded-2xl m-6 p-6 shadow-lg shadow-purple-500/30 grid md:grid-cols-3 gap-6 w-3/5" style="align-items: center;">
-            <div>
+        <div class="bg-gray-900 rounded-2xl m-3 sm:m-6 p-4 sm:p-6 shadow-lg shadow-purple-500/30 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full lg:w-3/5 mx-auto" style="align-items: center;">
+            <div class="lg:order-1">
                 <div class="carousel-container relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl">
                     <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
                         <div class="carousel-slide min-w-full">
-                            <img src="images/info/logo data battle.png" class="w-full h-64 object-cover" />
+                            <img src="images/info/logo data battle.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                            <img src="images/info/screen1.png" class="w-full h-64 object-cover" />
+                            <img src="images/info/screen1.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                            <img src="images/info/screen2.png" class="w-full h-64 object-cover" />
+                            <img src="images/info/screen2.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                            <img src="images/info/screen3.png" class="w-full h-64 object-cover" />
+                            <img src="images/info/screen3.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                            <img src="images/info/screen4.png" class="w-full h-64 object-cover" />
+                            <img src="images/info/screen4.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                     </div>
 
-                    <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❮
                     </button>
-                    <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❯
                     </button>
 
-                    <div class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                    <div class="carousel-indicators absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
                     </div>
                 </div>
             </div>            
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 lg:order-2 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-semibold text-purple-400">Plateforme web de révision pour les étudiants en droit</h3>
-                    <h2 class="text-2xl italic text-gray-500">2025</h2>
-                    <p class="mt-2 text-gray-300">Projet de groupe dans le cadre du Data Battle 2025 organisé par IA Pau. L'objectif était de proposé une plateforme de révision avec un chatbot utilisant l'IA 
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-400">Plateforme web de révision pour les étudiants en droit</h3>
+                    <h2 class="text-xl sm:text-2xl italic text-gray-500">2025</h2>
+                    <p class="mt-2 text-sm sm:text-base text-gray-300">Projet de groupe dans le cadre du Data Battle 2025 organisé par IA Pau. L'objectif était de proposé une plateforme de révision avec un chatbot utilisant l'IA 
                         générative et la technologie RAG pour proposer des QCM et corriger les réponses à partir d'articles officiels. L'interface de la plateforme propose également des statistiques liées aux 
                         réponses afin que l'étudiant puisse consulter ses points forts et faibles ainsi que son évolution.                         
                     <br/><br/>
                     La mise en place du RAG nous a demandé de traiter et formatter des données pour constituer notre corpus. Sur ce projet, nous avons aussi étudié les impacts socio-environnementaux d'une telle
                     plateforme afin d'en adapter au mieux les fonctionnalités et les usages pour diminuer les risques.
                     </p>
-                    <div class="flex flex-wrap mt-4 space-x-4 text-3xl">
-                        <i class="devicon-python-plain text-4xl text-white-400"></i>
+                    <div class="flex flex-wrap mt-4 space-x-2 sm:space-x-4 text-2xl sm:text-3xl">
+                        <i class="devicon-python-plain text-3xl sm:text-4xl text-white-400"></i>
                         <i class="devicon-streamlit-plain-wordmark"></i>
                     </div>
                 </div>
                 <div class="mt-4">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/DesordreOrganise/PatentAssist" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg">Voir le code (GitHub)</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/DesordreOrganise/PatentAssist" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center">Voir le code (GitHub)</a>
                 </div>
             </div>
         </div>
 
-        <div class="bg-gray-900 rounded-2xl m-6 p-6 shadow-lg shadow-purple-500/30 grid md:grid-cols-3 gap-6 w-3/5" style="align-items: center;">
-            <div>
+        <div class="bg-gray-900 rounded-2xl m-3 sm:m-6 p-4 sm:p-6 shadow-lg shadow-purple-500/30 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full lg:w-3/5 mx-auto" style="align-items: center;">
+            <div class="lg:order-2">
                 <div class="carousel-container relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl">
                     <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/logo_iapau.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/logo_iapau.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/screen_iapau.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/screen_iapau.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                     </div>
 
-                    <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❮
                     </button>
-                    <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❯
                     </button>
 
-                    <div class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                    <div class="carousel-indicators absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
                     </div>
                 </div>
             </div>            
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 lg:order-1 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-semibold text-purple-400">Site web pour l'association IA Pau</h3>
-                    <h2 class="text-2xl italic text-gray-500">2023</h2>
-                    <p class="mt-2 text-gray-300">Projet de groupe de fin de première année du cycle ingénieur dont l'objecti était de faire un site internet pour l'association IA Pau. Ce site devait principalement
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-400">Site web pour l'association IA Pau</h3>
+                    <h2 class="text-xl sm:text-2xl italic text-gray-500">2023</h2>
+                    <p class="mt-2 text-sm sm:text-base text-gray-300">Projet de groupe de fin de première année du cycle ingénieur dont l'objecti était de faire un site internet pour l'association IA Pau. Ce site devait principalement
                     centraliser la gestion des challenges et data battle que IA Pau organise. Cela passe ainsi par une architecture de compte utilisateurs avec différents niveaux de droits allant de l'administrateur
                     au participant, chacun ayant des possibilités de modification des projets ou de complétion de formulaires.
                     </p>
-                    <div class="flex flex-wrap mt-4 space-x-4 text-3xl">
+                    <div class="flex flex-wrap mt-4 space-x-2 sm:space-x-4 text-2xl sm:text-3xl">
                         <i class="devicon-html5-plain-wordmark"></i>
                         <i class="devicon-css3-plain-wordmark"></i>
                         <i class="devicon-javascript-plain"></i>
@@ -233,96 +237,96 @@
                     </div>
                 </div>
                 <div class="mt-4">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/TitouanPrl/plateforme-data-challenge" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg">Voir le code (GitHub)</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/TitouanPrl/plateforme-data-challenge" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center">Voir le code (GitHub)</a>
                 </div>
             </div>
         </div>
 
-        <div class="bg-gray-900 rounded-2xl m-6 p-6 shadow-lg shadow-purple-500/30 grid md:grid-cols-3 gap-6 w-3/5" style="align-items: center;">
-            <div>
+        <div class="bg-gray-900 rounded-2xl m-3 sm:m-6 p-4 sm:p-6 shadow-lg shadow-purple-500/30 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full lg:w-3/5 mx-auto" style="align-items: center;">
+            <div class="lg:order-1">
                 <div class="carousel-container relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl">
                     <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/paukemon_logo.jpg" class="w-full h-64 object-cover" />
+                        <img src="images/info/paukemon_logo.jpg" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/screen_paukemon1.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/screen_paukemon1.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/screen_paukemon2.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/screen_paukemon2.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/screen_paukemon3.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/screen_paukemon3.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                     </div>
 
-                    <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❮
                     </button>
-                    <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❯
                     </button>
 
-                    <div class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                    <div class="carousel-indicators absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
                     </div>
                 </div>
             </div>            
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 lg:order-2 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-semibold text-purple-400">Ouverture de boosters et gestion de cartes Pokémon</h3>
-                    <h2 class="text-2xl italic text-gray-500">2023</h2>
-                    <p class="mt-2 text-gray-300">Plateforme web permettant d'ouvrir des boosters virtuels de cartes Pokémon à l'infini, de consulter sa collection de cartes capturées et celles pas encore obtenues.
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-400">Ouverture de boosters et gestion de cartes Pokémon</h3>
+                    <h2 class="text-xl sm:text-2xl italic text-gray-500">2023</h2>
+                    <p class="mt-2 text-sm sm:text-base text-gray-300">Plateforme web permettant d'ouvrir des boosters virtuels de cartes Pokémon à l'infini, de consulter sa collection de cartes capturées et celles pas encore obtenues.
                         Possibilité de créer ses propres cartes et propres types énergétiques pour les voir apparaître dans les boosters.
                     </p>
-                    <div class="flex flex-wrap mt-4 space-x-4 text-3xl">
+                    <div class="flex flex-wrap mt-4 space-x-2 sm:space-x-4 text-2xl sm:text-3xl">
                         <i class="devicon-java-plain-wordmark"></i>
                     </div>
                 </div>
                 <div class="mt-4">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Clemamolette/Paukemon" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg">Voir le code (GitHub)</a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/Clemamolette/Paukemon" class="inline-block bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg text-center">Voir le code (GitHub)</a>
                 </div>
             </div>
         </div>
 
-        <div class="bg-gray-900 rounded-2xl m-6 p-6 shadow-lg shadow-purple-500/30 grid md:grid-cols-3 gap-6 w-3/5" style="align-items: center;">
-            <div>
+        <div class="bg-gray-900 rounded-2xl m-3 sm:m-6 p-4 sm:p-6 shadow-lg shadow-purple-500/30 grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 w-full lg:w-3/5 mx-auto" style="align-items: center;">
+            <div class="lg:order-2">
                 <div class="carousel-container relative w-full max-w-2xl mx-auto overflow-hidden rounded-xl">
                     <div class="carousel-slides flex transition-transform duration-500 ease-in-out">
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/interferogramme.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/interferogramme.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                         <div class="carousel-slide min-w-full">
-                        <img src="images/info/interferogramme_deroule.png" class="w-full h-64 object-cover" />
+                        <img src="images/info/interferogramme_deroule.png" class="w-full h-48 sm:h-64 object-cover" />
                         </div>
                     </div>
 
-                    <button class="carousel-prev absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-prev absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❮
                     </button>
-                    <button class="carousel-next absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full hover:bg-black/80 transition">
+                    <button class="carousel-next absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-1 sm:p-2 rounded-full hover:bg-black/80 transition text-sm sm:text-base">
                         ❯
                     </button>
 
-                    <div class="carousel-indicators absolute bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
-                        <button class="indicator w-3 h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                    <div class="carousel-indicators absolute bottom-2 sm:bottom-4 left-0 right-0 flex justify-center space-x-2 px-4">
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
+                        <button class="indicator w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-white/50 hover:bg-white transition"></button>
                     </div>
                 </div>
             </div>            
-            <div class="col-span-2 flex flex-col justify-between">
+            <div class="lg:col-span-2 lg:order-1 flex flex-col justify-between">
                 <div>
-                    <h3 class="text-2xl font-semibold text-purple-400">Mise en évidence des mouvements verticaux du sol</h3>
-                    <h2 class="text-2xl italic text-gray-500">2022</h2>
-                    <p class="mt-2 text-gray-300">TIPE réalisé en duo pendant la CPGE. L'objectif de l'algorithme développé est de prévenir les séismes en détectant les mouvements verticaux du sol inhabituels.
+                    <h3 class="text-xl sm:text-2xl font-semibold text-purple-400">Mise en évidence des mouvements verticaux du sol</h3>
+                    <h2 class="text-xl sm:text-2xl italic text-gray-500">2022</h2>
+                    <p class="mt-2 text-sm sm:text-base text-gray-300">TIPE réalisé en duo pendant la CPGE. L'objectif de l'algorithme développé est de prévenir les séismes en détectant les mouvements verticaux du sol inhabituels.
                         Nous utillisions des images satellites captés par les satellites Sentinel sous la forme d'interferogrammes enroulés. L'objectif de notre projet était de tester plusieurs algorithmes
                         permettant de dérouler l'interferogramme et passer ainsi d'une carte de déphasage des ondes perçues par le satellite à une carte de déplacements verticaux réels du sol.
                     </p>
-                    <div class="flex flex-wrap mt-4 space-x-4 text-3xl">
-                        <i class="devicon-python-plain text-4xl text-white-400"></i>
+                    <div class="flex flex-wrap mt-4 space-x-2 sm:space-x-4 text-2xl sm:text-3xl">
+                        <i class="devicon-python-plain text-3xl sm:text-4xl text-white-400"></i>
                     </div>
                 </div>
                 <div class="mt-4">
