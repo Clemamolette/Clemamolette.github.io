@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     const totalSlides = slides.length;
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
 
     function updateIndicators() {
       indicators.forEach((indicator, index) => {
@@ -50,18 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
       updateIndicators();
     }
 
+    function goToNext() {
+      currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
+      updateSlidePosition();
+    }
+
+    function goToPrev() {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
+      updateSlidePosition();
+    }
+
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
-        updateSlidePosition();
-      });
+      prevBtn.addEventListener('click', goToPrev);
     }
 
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
-        updateSlidePosition();
-      });
+      nextBtn.addEventListener('click', goToNext);
     }
 
     indicators.forEach((indicator, index) => {
@@ -69,6 +76,74 @@ document.addEventListener('DOMContentLoaded', function() {
         currentIndex = index;
         updateSlidePosition();
       });
+    });
+
+    // Gestion du swipe tactile
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+      isDragging = true;
+    }, { passive: true });
+
+    carousel.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+    }, { passive: false });
+
+    carousel.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          goToNext();
+        } else {
+          goToPrev();
+        }
+      }
+      
+      isDragging = false;
+    }, { passive: true });
+
+    carousel.addEventListener('mousedown', (e) => {
+      startX = e.clientX;
+      startY = e.clientY;
+      isDragging = true;
+      e.preventDefault();
+    });
+
+    carousel.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+    });
+
+    carousel.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      
+      const endX = e.clientX;
+      const endY = e.clientY;
+      const diffX = startX - endX;
+      const diffY = startY - endY;
+      
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          goToNext();
+        } else {
+          goToPrev();
+        }
+      }
+      
+      isDragging = false;
+    });
+
+    carousel.addEventListener('selectstart', (e) => {
+      if (isDragging) {
+        e.preventDefault();
+      }
     });
 
     updateSlidePosition();

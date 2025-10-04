@@ -66,7 +66,6 @@ body {
   }
 }
 
-/* Améliorations pour mobile */
 @media (max-width: 1023px) {
   #projets-info > div {
     margin-left: auto !important;
@@ -86,6 +85,25 @@ body {
 .indicator.active {
   background-color: rgb(139, 92, 246);
   transform: scale(1.2);
+}
+
+.carousel-container {
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.carousel-slides {
+  transition: transform 0.3s ease-in-out;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .carousel-prev,
+  .carousel-next {
+    touch-action: manipulation;
+  }
 }
 
 .lightbox {
